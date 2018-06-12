@@ -8,13 +8,16 @@
     "dev": "webpack-dev-server --host 0.0.0.0 --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "server": "PORT=9093 nodemon server/server.js",
+    "heroku": "NODE_ENV=production node server/server.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "better-scroll": "^1.11.1",
     "fastclick": "^1.0.6",
+    "http-proxy-middleware": "^0.18.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue": "^2.5.2",
