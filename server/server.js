@@ -1,7 +1,8 @@
 const path = require('path')
 const express = require('express')
-
+const favicon = require('serve-favicon')
 const proxyMiddleWare = require("http-proxy-middleware")
+
 let proxyOption = {
     target:'/',
     pathRewrite: {
@@ -21,6 +22,8 @@ const server = app.listen(port, function () {
 })
 
 app.use(express.static(path.join(__dirname, '../dist')))
+
+app.use(favicon(path.join(__dirname,'../','static','images','favicon.ico')))
 
 app.use('/api', proxyMiddleWare(proxyOption))
 

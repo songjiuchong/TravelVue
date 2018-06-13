@@ -18,6 +18,7 @@
     "better-scroll": "^1.11.1",
     "fastclick": "^1.0.6",
     "http-proxy-middleware": "^0.18.0",
+    "serve-favicon": "^2.5.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue": "^2.5.2",
