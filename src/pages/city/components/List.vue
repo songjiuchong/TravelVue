@@ -59,6 +59,9 @@ export default {
     },
     ...mapMutations(['changeCity'])
   },
+  activated () {
+    window.dispatchEvent(new Event('resize'))
+  },
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper, {click: true})
   },

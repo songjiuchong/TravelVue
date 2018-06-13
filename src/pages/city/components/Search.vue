@@ -66,6 +66,9 @@ export default {
       }, 100)
     }
   },
+  activated () {
+    window.dispatchEvent(new Event('resize'))
+  },
   mounted () {
     this.scroll = new Bscroll(this.$refs.search, {click: true})
   }
