@@ -16,6 +16,7 @@
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "better-scroll": "^1.11.1",
+    "express": "^4.16.3",
     "fastclick": "^1.0.6",
     "http-proxy-middleware": "^0.18.0",
     "serve-favicon": "^2.5.0",
