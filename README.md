@@ -32,6 +32,7 @@ Developing tool: Vue-cli, webpack, webpack-dev-server, eslint, babel...
 
 #### More Details:
 This is a demo for using Vue.js to develop a mobile/desktop App;
+<br/>
 **You can check 'dev memo.md' for more details if you want to know all the design as well as problem solving during the development;**
 <br/><br/>
 
