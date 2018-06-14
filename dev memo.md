@@ -79,18 +79,18 @@ Vue的中文官方文档比较完善, 并且发展也很快, 像NUXT这样用于
 
 上例中, 使用了jQuery来实现了基于MVP结构的todolist功能, M层并没有在上例中体现, 因为没有使用任何数据模型去获取/存储数据, V层就是html元素, P层在MVP结构项目中是核心层(其中大部分操作属于DOM操作), 它监听V层的用户交互行为并且执行相应的业务逻辑, 然后通过DOM操作去更新页面, 同时它又负责调用数据模型来完成数据的存储与获取:
 
-![](./img/1.png)
+![](./dev_memo_img/1.png)
 
 mvvm(比较典型的应用包括: .NET的WPF，js框架Knockout、AngularJS等)
 
-![](./img/2.png)
+![](./dev_memo_img/2.png)
 
 很显然, mvvm结构使用ViewModel代替了Presenter层, 其实它们的职责是类似的, 只不过使用了mvvm结构的前端框架会自动为开发者实现vm层的功能: 监听视图层的数据变化, 并且更新到ViewModel中, 同时也会检查ViewModel中的数据变化并自动更新到视图层中, 这样就省去了原先在MVP结构项目中的大量DOM操作, 所以可以认为使用了mvvm结构框架的开发者只需要专注于对M层的开发即可(当然M层中会包含业务逻辑和对数据模型的调用);
 
 
 Vue实例生命周期钩子;
 
-![](./img/3.png)
+![](./dev_memo_img/3.png)
 
 
 参考:
@@ -2236,7 +2236,7 @@ http://git.mydoc.io/?t=154712
 
 添加完成后:
 
-![](./img/4.png)
+![](./dev_memo_img/4.png)
 
 补充:
 1.上面提到的SSH key相关命令都需要在linux中使用(MAC终端可以直接使用), window操作系统中(无法使用cmd来执行这些命令)使用git bush就相当于启动了一个小型的linux终端, 就可以使用linux命令了;
@@ -2262,7 +2262,7 @@ $ vue init webpack TravelVue
 $ cd TravelVue
 $ npm run dev
 
-![](./img/5.png)
+![](./dev_memo_img/5.png)
 
 ……
 
@@ -2577,11 +2577,11 @@ html {font-size: 50px}
 
 在iconfont的图标库->官方图标库中选择一些之后需要使用的图标添加到购物车, 然后点击购物车将其中所有图标添加到之前创建的项目中, 来到项目中点击下载至本地;
 
-![](./img/6.png)
+![](./dev_memo_img/6.png)
 
 下载后解压, 获得的文件列表为:
 
-![](./img/7.png)
+![](./dev_memo_img/7.png)
 
 
 其中demo开头的文件, 和.js文件不需要;
@@ -2623,7 +2623,7 @@ import './assets/styles/iconfont.css'
 
 上例中通过<span class="iconfont">&#xe624;</span>添加了一个字体图标, 其中<span>元素的内容: &#xe624; 可以在iconfont网站上通过复制对应图标的代码获取;
 
-![](./img/8.png)
+![](./dev_memo_img/8.png)
 
 
 另一种使用方法是根据iconfont.css中定义的所下载图标的样式类来声明图标, 如:
@@ -2694,7 +2694,7 @@ export default {
 
 页面中效果:
 
-![](./img/9.png)
+![](./dev_memo_img/9.png)
 
 
 
@@ -2835,11 +2835,11 @@ export default {
 测试方法:
 在chrome浏览器的Developer Tools中Network选项中, 点击右上角的online按钮后选择: Fast 3G, 然后刷新页面查看效果(目的是测试网速较慢时页面加载的效果);
 
-![](./img/10.png)
+![](./dev_memo_img/10.png)
 
 可以发现, 当页面加载时由于图片下载较慢, 轮播组件初始情况下没有高度, 所以div元素中的test显示在了header组件之下, 之后图片下载完成后轮播组件才会被’撑开’正常显示, 所以会有一个’抖动’的效果, 用户体验有影响;
 
-![](./img/11.png)
+![](./dev_memo_img/11.png)
 
 
 解决方法:
@@ -2874,7 +2874,7 @@ export default {
 上例中在<swiper>组件外包裹了一层div元素, 并且为其设置了相关的样式, 其中padding-bottom: 52.46% 的功能是根据父元素宽度的52.46%来撑开一个高度(相当于一个占位元素, 去除了抖动效果), 而这个52.64%是根据图片的实际大小的高/宽比计算出来的, 这样就能满足无论页面宽度是多少, 这个占位元素所占的高度都会是轮播图加载后所占的高度;
 并且设置了一个background背景色, 让图片还未加载完全时显示一个灰色占位背景;
 
-![](./img/12.png)
+![](./dev_memo_img/12.png)
 
 
 上例中, 277/528 = 0.5246…
@@ -2894,7 +2894,7 @@ https://segmentfault.com/a/1190000004231995
 
 这样就能够防止页面的’抖动’了;
 
-![](./img/13.png)
+![](./dev_memo_img/13.png)
 
 
 (4)为轮播图添加pagination(分页点);
@@ -2917,11 +2917,11 @@ export default {
 </script>
 ……
 
-![](./img/14.png)
+![](./dev_memo_img/14.png)
 
 但是这里需要将选中状态的pagination点改为白色的, 所以试着根据页面中对应元素的样式修改:
 
-![](./img/15.png)
+![](./dev_memo_img/15.png)
 
 
 修改Swiper.vue;
@@ -2963,7 +2963,7 @@ export default {
 
 上例中使用’>>>’这样的语法来进行样式的’穿透’, 作用是为当前组件中的.wrapper元素下的所有子组件中指定了.swiper-pagination-bullet-active的元素设置样式而不受scoped属性的限制;
 
-![](./img/16.png)
+![](./dev_memo_img/16.png)
 
 
 (5)优化轮播图的设置方式并添加循环展示功能;
@@ -3012,12 +3012,12 @@ export default {
 上例中通过定义loop:true让swiper组件开启了循环展示轮播图的功能, 观察页面加载时的html:
 
 
-![](./img/17.png)
+![](./dev_memo_img/17.png)
 
 
 可以发现, 其实swiper组件为了达到效果, 生成了4个swiper-slide组件(上例中设置了2张轮播图), 假设我们指定的两个swiper-slide组件中的图片分别为1和2, 那么开启了loop功能的swiper组件生成的4个swiper-slide组件中包含的图片分别为: 2 1 2 1, 这样设置的目的是为了让用户在某一张图片上向左/向右滑动时都能逐渐展示另一张图片来达到循环展示的效果:
 
-![](./img/18.png)
+![](./dev_memo_img/18.png)
 
 
 在页面刚加载时显示的是第二个swiper-slide组件中的图片1, 此时用来包裹所有swiper-slide组件的swiper-wrapper组件中设置的transform属性为: translate3d(-602px, 0px, 0px); 其中在x轴上的-602px就是为了在页面加载时从第一个swiper-slide组件(图片2)变化到第二个swiper-slide组件从而显示图片1, 并且保证了此时图片1所在的swiper-slide组件的左侧和右侧为两个包含了图片2的swiper-slide组件;
@@ -3102,7 +3102,7 @@ http://www.cnblogs.com/zhaoran/archive/2013/05/24/3097482.html
 
 最后需要说明的一点是, 无论父元素的box-sizing设置为什么类型, 子元素的高度/宽度如果设置为百分比的话都是根据父元素content部分的高度/宽度做为参照的, 当然条件是子元素相对父元素不是绝对定位, 如果是绝对定位, 那么高度/宽度的百分比时根据父元素content+padding部分作为参照的;
 
-![](./img/19.png)
+![](./dev_memo_img/19.png)
 
 
 修改variables.styl;
@@ -3110,7 +3110,7 @@ http://www.cnblogs.com/zhaoran/archive/2013/05/24/3097482.html
 $darkTextColor = #333
 
 ￼
-![](./img/20.png)
+![](./dev_memo_img/20.png)
 
 
 
@@ -3238,21 +3238,21 @@ export default {
 值得注意的是, 上例在模板中使用了嵌套的v-for循环语句;
 
 
-![](./img/21.png)
+![](./dev_memo_img/21.png)
 
-![](./img/22.png)
+![](./dev_memo_img/22.png)
 
 上例的样式设置中, 通过: .icons >>> .swiper-container 来指定了轮播的滑动区域为整个图标区域;
 .swiper-container元素其实就是swiper组件渲染后的最外层元素, 它自带了overflow: hidden; 样式属性;
 
-![](./img/23.png)
+![](./dev_memo_img/23.png)
 
-![](./img/24.png)
+![](./dev_memo_img/24.png)
 
 
 (3)实现元素中文字内容过长时使用’…’来展示的样式;
 
-![](./img/25.png)
+![](./dev_memo_img/25.png)
 
 
 上图中由于文字内容过多, 所以在.icon-desc这个<p>元素中显示不完全;
@@ -3293,7 +3293,7 @@ ellipsis()
 
 这三个样式;
 
-![](./img/26.png)
+![](./dev_memo_img/26.png)
 
 
 
@@ -3411,7 +3411,7 @@ import HomeRecommend from './components/Recommend'
   }
 ……
 
-![](./img/27.png)
+![](./dev_memo_img/27.png)
 
 
 
@@ -3511,7 +3511,7 @@ import HomeWeekend from './components/Weekend'
   }
 ……
 
-![](./img/28.png)
+![](./dev_memo_img/28.png)
 
 
 
@@ -3598,7 +3598,7 @@ static/mock
 
 
 Home.vue中接收到的数据;
-![](./img/29.png)
+![](./dev_memo_img/29.png)
 
 
 
@@ -3850,7 +3850,7 @@ export default {
 </script>
 ……
 
-![](./img/30.png)
+![](./dev_memo_img/30.png)
 
 
 
@@ -3928,7 +3928,7 @@ export default new Router({
       color: #fff
 ……
 
-![](./img/31.png)
+![](./dev_memo_img/31.png)
 
 
 
@@ -3993,7 +3993,7 @@ export default {
 
 在首页上点击.header-right元素就会跳转到城市选择页面, 点击左上角的back-icon又会回到首页;
 
-![](./img/32.png)
+![](./dev_memo_img/32.png)
 
 
 
@@ -4046,7 +4046,7 @@ export default {
 
 可以发现, 我们在设置单文件组件的stylus样式时都没有使用过类似: -webkit- 这样的厂商前缀, 这是因为vue-cli的设置会让webpack使用vue-loader, 而vue-loader依赖了postcss这个插件(autoprefixer的功能), 它会自动添加必要的兼容性厂商前缀;
 
-![](./img/33.png)
+![](./dev_memo_img/33.png)
 
 
 
@@ -4187,12 +4187,12 @@ http://stylus-lang.com/ (官方网站)
 
 上例中如果没有设置.list相关的样式, 那么由于.list元素中内容过多(假设在其中添加了许多内容)整个页面可以被滚动浏览, 并且会出现滚动条:
 
-![](./img/34.png)
+![](./dev_memo_img/34.png)
 
 
 如果此时将.list的背景颜色设置为红色, 观察页面:
 
-![](./img/35.png)
+![](./dev_memo_img/35.png)
 
 可以发现, 由于.list并没有将超出页面的部分视为’溢出’的内容, 所以.list中所有的内容(包括通过滚动才能展示的内容)都是红色的;
 所以这种情况下就算为.list元素添加overflow: hidden样式, 效果相同;
@@ -4200,16 +4200,16 @@ http://stylus-lang.com/ (官方网站)
 
 如果此时为.list添加position: absolute 相关样式后, 观察页面:
 
-![](./img/36.png)
+![](./dev_memo_img/36.png)
 
 可以发现, 当元素设置为position: absolute之后, 超出了页面的内容被.list元素视为了’溢出’的内容, 所以并没有用红色渲染, 虽然此时还是可以通过滚动展示其’溢出’的内容;
 
 
 如果此时再为.list添加overflow:hidden样式, 观察页面:
 
-![](./img/37.png)
+![](./dev_memo_img/37.png)
 
-![](./img/38.png)
+![](./dev_memo_img/38.png)
 
 
 此时无法通过滚动页面来查看.list中’溢出’的内容了, 滚动条也不存在了, 这就是我们需要的模仿原生APP的效果;
@@ -4265,7 +4265,7 @@ export default {
 上例中在List.vue组件内引入了Better-scroll插件, 并且基于.list元素创建了一个新的Better-scroll实例;
 其实上例中的: this.scroll = new Bscroll(this.$refs.wrapper) 改为 new Bscroll(this.$refs.wrapper)效果相同;
 
-![](./img/39.png)
+![](./dev_memo_img/39.png)
 
 这样当用户在页面拖拽时就可以展示.list中’溢出’的内容了, 并且这个拖拽不会造成整个页面的滚动(默认情况下也不会显示滚动条, 并且当拖拽到顶部/底部时会有弹性效果), 所以不会影响.list元素外其它元素的位置;
 
@@ -4314,7 +4314,7 @@ export default {
 
 上例中通过绝对定位和flex布局完成了一个纵向居中展示内容的字母表(字母表的内容后续会通过循环完成);
 
-![](./img/40.png)
+![](./dev_memo_img/40.png)
 
 
 
@@ -4397,9 +4397,9 @@ export default {
 
 观察city.json传递的数据:
 
-![](./img/41.png)
+![](./dev_memo_img/41.png)
 
-![](./img/42.png)
+![](./dev_memo_img/42.png)
 
 
 
@@ -4453,7 +4453,7 @@ export default {
 上例中使用了: v-for="(item, key) of cities” 来遍历一个对象而不是数组, 需要注意的是此时遍历获取的是(item, key)而不是遍历数组时的(item, index);
 上例中其实可以使用created钩子函数替换mounted, created(触发顺序类似于react的componentWillMount)是beforeMount之前的一个钩子函数, 但是最好还是将ajax操作放在mounted函数中执行;
 
-![](./img/43.png)
+![](./dev_memo_img/43.png)
 
 
 
@@ -4475,7 +4475,7 @@ export default {
 </script>
 ……
 
-![](./img/44.png)
+![](./dev_memo_img/44.png)
 
 
 
@@ -4580,7 +4580,7 @@ data () {
 上例中List.vue组件通过props获取了从父组件传递的数据, 然后通过watch方法监听这个数据的变化, 一旦改变就通过better-scroll插件提供的scrollToElement方法让对应的.area元素滚动到.list元素的最顶端;
 需要注意的是, 上例中通过v-for在.area元素上设置ref属性后其实在this.$refs上创建了若干个与.area元素相关的数组而不是对象(与一般情况不同), 所以不能通过this.$refs[this.letter]来获取, 需要通过this.$refs[this.letter][0]来获取到真正的dom元素对象;
 
-![](./img/45.png)
+![](./dev_memo_img/45.png)
 
 
 不过上例存在一个问题, 那就是如果点击同一个字母多次, 第二次点击并不会触发City.vue组件的update, 当然子组件List.vue中相应的watch方法也不会被触发, 所以就不能再次滚动到相应的位置了;
@@ -4690,7 +4690,7 @@ https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/offsetParent
 
 3.touchmove事件会传递一个事件对象e给回调函数, 这个对象的结构如下:
 
-![](./img/46.png)
+![](./dev_memo_img/46.png)
 
 
 上例中就是通过e.touches[0].clientY来获取当前触摸事件所在元素距离页面顶部的距离的;
@@ -4983,15 +4983,15 @@ Cannot read property ‘length’ of undefined
 上例中使用了v-model这样双向数据绑定的指令来让页面数据发生改变时同时更新组件内对应的属性, 这个操作是会引发一次组件的更新的, 如果这个与v-model绑定的组件属性不会引发任何其它属性的变更也会让组件重新udpate一次, 这其实非常重要, 因为虽然这次组件更新不会改变任何的页面内容, 但是会通过重新生成模板来更新虚拟树的内容, 让虚拟树与当前页面保持一致;
 
 
-![](./img/47.png)
+![](./dev_memo_img/47.png)
 
-![](./img/48.png)
+![](./dev_memo_img/48.png)
 
-![](./img/49.png)
+![](./dev_memo_img/49.png)
 
-![](./img/50.png)
+![](./dev_memo_img/50.png)
 
-![](./img/51.png)
+![](./dev_memo_img/51.png)
 
 
 
@@ -5003,7 +5003,7 @@ Cannot read property ‘length’ of undefined
 当我们的应用遇到多个组件共享状态时, 单向数据流的简洁性很容易被破坏, 所以我们需要把组件的共享状态抽取出来, 以一个全局单例模式管理;
 这就是 Vuex 背后的基本思想, 它借鉴了 Flux、Redux、和 The Elm Architecture; 与其他模式不同的是, Vuex 是专门为 Vue.js 设计的状态管理库;
 
-![](./img/52.png)
+![](./dev_memo_img/52.png)
 
 对于Vuex, 使用者可以通过在vue的component中通过dispatch方法来分发一个action, action中可以继续异步的数据获取, 或者大批量的同步数据计算, 然后通过commit方法可以操作mutation(某些情况下vue component也可以直接操作mutation), 只有mutation才能改变全局state中的数据;
 当state中数据发生变换时, 相应的vue component中的内容也会被重新render;
@@ -5129,12 +5129,12 @@ export default new Vuex.Store({
 
 
 点击热门城市中的丽江按钮后:
-![](./img/53.png)
+![](./dev_memo_img/53.png)
 
 
 首页:
 
-![](./img/54.png)
+![](./dev_memo_img/54.png)
 
 
 
@@ -5451,7 +5451,7 @@ const store = createStore(reducers, compose(
 当前页面中存在一个问题是:
 每次切换路由(在首页和城市选择页面之间切换)都会通过Ajax请求一次json文件(index.json/city.json), 这是因为首页和城市选择页面这两个组件在mounted钩子函数中使用axios请求了相应数据, 通过在浏览器开发者工具的Network部分可以观察请求情况:
 
-![](./img/55.png)
+![](./dev_memo_img/55.png)
 
 
 
@@ -5495,7 +5495,7 @@ keep-alive组件直属子组件的所有子孙组件也会被一起缓存, 所�
 
 在城市选择页面中填写了搜索关键字后:
 
-![](./img/56.png)
+![](./dev_memo_img/56.png)
 
 
 此时通过左上角的返回按钮回到首页, 然后再次点击首页中右上角的城市选项来到城市选择页面时显示的仍旧是上图的内容;
@@ -5554,19 +5554,19 @@ import {mapState} from 'vuex'
 
 
 首次加载首页时会请求一次json数据:
-![](./img/57.png)
+![](./dev_memo_img/57.png)
 
 
 
 路由切换到城市选择页面后会请求一次json数据:
 
-![](./img/58.png)
+![](./dev_memo_img/58.png)
 
 
 
 选择一个新的城市回到首页后会重新请求对应的新json数据:
 
-![](./img/59.png)
+![](./dev_memo_img/59.png)
 
 
 之后在不选择新城市的情况下切换路由就不会再请求任何json数据了;
@@ -5714,13 +5714,13 @@ https://www.w3cplus.com/css3/do-you-really-understand-css-linear-gradients.html 
 https://www.w3cplus.com/content/css3-gradient (重要)
 
 
-![](./img/60.png)
+![](./dev_memo_img/60.png)
 
 
 
 上例中在.banner-info上使用了display: flex, 然后在.banner-title上设置了flex:1, 但是并没有在其同级元素.banner-number上设置flex布局的属性, 所以页面上展示的效果是:
 
-![](./img/61.png)
+![](./dev_memo_img/61.png)
 
 
 也就是说, .banner-title元素会自动撑满.banner-info中的剩余宽度(flex:1;同时代表了flex-grow: 1;), 而.banner-number会靠右侧按照元素原始宽度布局;
@@ -5883,9 +5883,9 @@ export default {
 需要注意的是, 上例中必须同时设置observer和observeParents这两个属性, 如果不设置observeParents属性, 那么滑动轮播的问题不会解决;
 
 
-![](./img/62.png)
+![](./dev_memo_img/62.png)
 
-![](./img/63.png)
+![](./dev_memo_img/63.png)
 
 
 
@@ -5912,7 +5912,7 @@ http://www.swiper.com.cn/api/pagination/299.html
 
 这里希望实现的效果如下图所示:
 
-![](./img/64.png)
+![](./dev_memo_img/64.png)
 
 
 也就是说, 当页面刚加载时(用户还未向下滚动/滑动页面), 左上角的圆形返回按钮(.header-abs元素)处于展示状态, 点击后可以返回首页, 此时header元素(.header-fixed元素)处于隐藏状态(display:none);
@@ -6170,7 +6170,7 @@ export default {
 
 上例中使用了递归组件的功能, 通过组件的name属性来递归调用自身; 先通过props中接收的list数组元素遍历展示了相应的模板内容, 在每次遍历展示出的元素之后再继续通过将list数组元素中的children属性(结构与list属性相同都是数组)取出作为props属性:list 传递给递归调用自身的DetailList组件, 继续遍历展示模板内容;
 
-![](./img/65.png)
+![](./dev_memo_img/65.png)
 
 
 
@@ -6209,7 +6209,7 @@ height: .36rem
 
 上例中使用的原始雪碧图(其中第二张就是上例中使用的图标):
 
-![](./img/66.png)
+![](./dev_memo_img/66.png)
 
 
 
@@ -6218,7 +6218,7 @@ height: .36rem
 
 上例中在.item-title这个div元素中: span元素.item-title-icon(被设置为了display:inline-block)和文本’成人票’都属于行内的内容, 所以如果想让.item-title-icon元素相对它右侧的文本内容降低一些高度, 那么不能通过对其设置margin-top来达到这个目的, 因为此时它们是属于同一行的内容, 设置margin-top会让它们做为一个整体降低高度(同理, 设置margin-left会让它们一起右移), 解决办法是通过将.item-title-icon元素设置为position: relative, 然后通过调整自身的相对位置来达到降低与它右侧文本内容高度差的目的(也可以缩小与文本内容之间的距离);
 
-![](./img/67.png)
+![](./dev_memo_img/67.png)
 
 
 还需要注意的是, 之所以.item-title-icon这个inline-block类型的元素需要降低高度来保持与它右侧的文本内容同高, 是因为它虽然与其右侧垂直居中的文本(由于.item-title元素只设置了line-height,相当于line-height与height相同, 所以会垂直居中)都属于同一行的内容, 但是它本身(指定了高/宽)并不是垂直居中的, 不过如果这种情况下.item-title-icon元素中存在文本内容的话, 那么文本内容相对.item-title元素将会是垂直居中的, 但是.item-title-icon元素本身如果指定了高度的话不是垂直居中的;
@@ -6229,13 +6229,13 @@ height: .36rem
 目前项目中还存在一个问题:
 详情页面的Header组件会被页面中.content元素中的内容覆盖, 原因是在.item-title元素上使用了border-bottom样式, 这个样式会为元素添加 position: relative(将元素的position设置为relative/absolute都会使元素脱离当前的文档流, 或者说会处于当前文档流之上, 当然它们的子元素也会跟着一起脱离当前文档流, 而由于无论处于哪个文档流中的元素默认z-index都是0, 并且在正常文档流中非父子关系的情况下设置在文档中靠后位置的元素默认会覆盖在它之前设置的元素, 所以同样是脱离了文档流的两个非父子关系的元素处于之后位置的元素会默认覆盖之前位置的元素);
 
-![](./img/68.png)
+![](./dev_memo_img/68.png)
 
 
 
 解决办法是为Header组件中的.header-fixed元素添加 z-index: 2(注意, 这里的z-index需要比Banner组件中的Gallary组件在.container上设置的z-index: 99; 小);
 
-![](./img/69.png)
+![](./dev_memo_img/69.png)
 
 
 
@@ -6324,11 +6324,11 @@ axios.get('/api/detail.json', {
 上例中在组件上调用了$route对象来获取当前的路由路径信息, 同时组件上还存在$router对象;
 
 this.$route
-![](./img/70.png)
+![](./dev_memo_img/70.png)
 
 
 this.$router
-![](./img/71.png)
+![](./dev_memo_img/71.png)
 
 
 
@@ -6403,7 +6403,7 @@ export default new Router({
 上例中为vue-router实例对象设置的scrollBehavior属性相当于是一个回调函数(在路由切换时执行), 其中会传入三个参数, to和from是两个类似$route的路由路径对象, 而savedPosition是一个坐标对象, 当用户通过点击浏览器的前进/后退按钮来进行路由时(其实就是对popstate事件的监听)它就是离开当前路由路径时的滚轮位置的坐标对象, 其它情况下它的值为null;
 而这个回调函数return的坐标值就是来到新路由路径后希望页面滚轴所在的坐标;
 
-![](./img/72.png)
+![](./dev_memo_img/72.png)
 
 
 注意: 这个功能只在支持 history.pushState 的浏览器中可用;
@@ -6493,7 +6493,7 @@ module.exports = {
 
 在终端输入: ifconfig (window下输入ipconfig)
 
-![](./img/73.png)
+![](./dev_memo_img/73.png)
 
 
 可以发现, 本机的内网地址为:
@@ -6579,7 +6579,7 @@ $ npm run build
 
 在项目根目录下会新增一个dist文件夹;
 
-![](./img/74.png)
+![](./dev_memo_img/74.png)
 
 
 这个文件夹就是后端服务器根目录下应该存放的前端上线代码;
@@ -6756,24 +6756,24 @@ export default new Router({
 
 访问首页后加载了2个js;
 
-![](./img/75.png)
+![](./dev_memo_img/75.png)
 
 
 继续来到城市选择页面后有加载了一个js;
 
-![](./img/76.png)
+![](./dev_memo_img/76.png)
 
 
 来到详情页面后加载的js;
 
-![](./img/77.png)
+![](./dev_memo_img/77.png)
 
 
 可以发现第一次来到一个路由时都会加载一个对应组件的bundle文件, 不过需要注意的是, 这样会在路由更换时多触发一次请求, 所以在没有使用异步加载模块前如果app.js本身容量不大的话就不应该使用异步加载组件的方式(如果app.js至少大于1mb的时候才需要通过异步组件的方式提供页面性能);
 
 
 在使用了异步组件之后执行vue-cli的build, 可以发现当前的dist/static/js目录结构变为了:
-![](./img/78.png)
+![](./dev_memo_img/78.png)
 
 
 
