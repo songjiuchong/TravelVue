@@ -6958,8 +6958,9 @@ https://stackoverflow.com/questions/15463199/how-to-set-custom-favicon-in-expres
 这个问题在Search和List组件中使用了better-scroll插件的部分都会出现;
 
 根据分析, 发生的原因可能是在路由改变后被缓存的组件被重新渲染时better-scroll根据元素的大小来进行初始化失效造成的, 解决方法可以是:
-将原本设置在mounted钩子函数中的 this.scroll = new Bscroll(this.$refs.wrapper, {click: true}) 改成设置在activated钩子函数中;
-另一种方式是在组件的activated钩子函数中发放一个resize事件, 如: window.dispatchEvent(new Event('resize'))
+(1)将原本设置在mounted钩子函数中的 this.scroll = new Bscroll(this.$refs.wrapper, {click: true}) 改成设置在activated钩子函数中;
+(2)在组件的activated钩子函数中发放一个resize事件, 如: window.dispatchEvent(new Event('resize’));
+(3)在组件的activated钩子函数中使用better-scroll定义的refresh方法, 如: this.scroll.refresh();
 
 这里采用第二种方式解决;
 
