@@ -20,6 +20,39 @@ npm run server
 
 #### production version deployed at heroku cloud server:
 https://songjiuchongtravelvue.herokuapp.com/
+<br/><br/>
 
+#### tech-stack for developing Employment-Social-Networking-App(check package.json for details):
+Front-end: Vue2.5.2, vue-router3, vuex3, vue-awesome-swiper3, fastclick, axios, better-scroll, stylus, babel-polyfill...
+<br/>
+Back-end: node + express4, http-proxy-middleware, serve-favicon...
+<br/>
+Developing tool: Vue-cli, webpack, webpack-dev-server, eslint, babel...
+<br/><br/>
 
+#### More Details:
+This is a demo for using Vue.js to develop a mobile/desktop App;
+**You can check 'dev memo.md' for more details if you want to know all the design as well as problem solving during the development;**
+<br/><br/>
+
+#### screenshots of the demo:
+<br/>
+![](./README_img/1.png)
+<br/>
+![](./README_img/2.png)
+<br/>
+![](./README_img/3.png)
+<br/>
+![](./README_img/4.png)
+<br/>
+![](./README_img/5.png)
+<br/>
+![](./README_img/6.png)
+<br/>
+![](./README_img/7.png)
+<br/>
+![](./README_img/8.png)
+<br/>
+![](./README_img/9.png)
+<br/>
 
