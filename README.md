@@ -37,22 +37,23 @@ This is a demo for using Vue.js to develop a mobile/desktop App;
 
 #### screenshots of the demo:
 <br/>
+
 ![](./README_img/1.png)
-<br/>
+
 ![](./README_img/2.png)
-<br/>
+
 ![](./README_img/3.png)
-<br/>
+
 ![](./README_img/4.png)
-<br/>
+
 ![](./README_img/5.png)
-<br/>
+
 ![](./README_img/6.png)
-<br/>
+
 ![](./README_img/7.png)
-<br/>
+
 ![](./README_img/8.png)
-<br/>
+
 ![](./README_img/9.png)
-<br/>
+
 
