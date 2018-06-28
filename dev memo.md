@@ -5343,7 +5343,10 @@ import {mapState, mapMutations} from 'vuex’
 
 上例中可以发现, 还可以对vuex的mapState方法传入一个对象(其它map相关方法都有这样的形式), 这样就可以为state中的数据临时定义一个引用名了;
 
-不难发现, vuex提供的mapState/mapActions的作用就相当于React-Redux提供的mapStateToProps/mapDispatchToProps(React-Redux会为mapDispatchToProps中指定的函数传入dispatch,getState);
+不难发现, vuex提供的mapState/mapActions的作用就相当于React-Redux提供的mapStateToProps/mapDispatchToProps;
+
+注意:
+React-Redux会为mapDispatchToProps中指定的函数做一层封装, 当执行通过mapDispatchToProps封装的函数时, 如: a(‘test’), 就相当于执行了store.dispatch(a(‘test’)), 至于这个a(‘test’)返回一个单纯的action对象(默认dispatch方法可以接受的值), 还是一个函数(此时就需要redux-thunk这个applyMiddleware的支持来改造dispatch方法), 都不会影响mapDispatchToProps的封装方式; 而如果a(’test’)返回一个函数, 那么redux-thunk会自动为这个函数传入dispatch和getState这两个参数......
 
 
 除了state, actions, mutations, vuex还提供了getters和modules属性;
